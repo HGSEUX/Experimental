@@ -1,17 +1,17 @@
 local d = {}
 
 d.normal = {
-    { time = 90,    event = { 'extraQuestBase', 4, 'animDuration', .5 } },
-    { time = 180,   event = { 'extraQuestBase', 3, 'animDuration', .5 } },
-    { time = 240,   event = { 'extraQuestBase', 2, 'animDuration', 1 } },
+    { time = 1,    event = { 'extraQuestBase', .2, 'animDuration', .5 } },
+    { time = 2,   event = { 'extraQuestBase', .2, 'animDuration', .5 } },
+    { time = 3,   event = { 'extraQuestBase', .2, 'animDuration', 1 } },
 
-    { time = 294,   event = function() GAME.boardDim = { .7, .7, .7 } end },
-    { time = 295,   event = function() GAME.boardDim = { .9, .9, .9 } end },
-    { time = 296,   event = function() GAME.boardDim = { .5, .5, .5 } end },
-    { time = 297,   event = function() GAME.boardDim = { .8, .8, .8 } end },
-    { time = 298,   event = function() GAME.boardDim = { .3, .3, .3 } end },
-    { time = 299,   event = function() GAME.boardDim = { .1, .1, .1 } end },
-    { time = 300,   event = { 'dmgTimerMul', -.1, 'animDuration', 1 },                   text = "FATIGUE SETS IN_",          desc = "TimerSpeed++" },
+    { time = 4,   event = function() GAME.boardDim = { .7, .7, .7 } end },
+    { time = 5,   event = function() GAME.boardDim = { .9, .9, .9 } end },
+    { time = 6,   event = function() GAME.boardDim = { .5, .5, .5 } end },
+    { time = 7,   event = function() GAME.boardDim = { .8, .8, .8 } end },
+    { time = 8,   event = function() GAME.boardDim = { .3, .3, .3 } end },
+    { time = 9,   event = function() GAME.boardDim = { .1, .1, .1 } end },
+    { time = 10,   event = { 'dmgTimerMul', -.1, 'animDuration', 1 },                   text = "FATIGUE SETS IN_",          desc = "TimerSpeed++" },
     { time = 0,     event = function() GAME.setFatigueColor('norm') end },
     { time = 301,   event = function() GAME.boardDim = { 1, 1, 1 } end },
 
