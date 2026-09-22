@@ -1,9 +1,9 @@
 local d = {}
 
 d.normal = {
-    { time = 90,    event = { 'extraQuestBase', .2, 'animDuration', .5 } },
-    { time = 180,   event = { 'extraQuestBase', .2, 'animDuration', .5 } },
-    { time = 240,   event = { 'extraQuestBase', .2, 'animDuration', 1 } },
+    { time = 90,    event = { 'extraQuestBase', 4, 'animDuration', .5 } },
+    { time = 180,   event = { 'extraQuestBase', 3, 'animDuration', .5 } },
+    { time = 240,   event = { 'extraQuestBase', 2, 'animDuration', 1 } },
 
     { time = 294,   event = function() GAME.boardDim = { .7, .7, .7 } end },
     { time = 295,   event = function() GAME.boardDim = { .9, .9, .9 } end },
