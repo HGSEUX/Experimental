@@ -1394,7 +1394,7 @@ function scene.overDraw()
             local ky = max(kx, Q.k)
             local a = 1
             if M.IN == 2 then
-                local k = M.DP > 0 and i <= 2 and 1 / i or i ^ -2
+                local k = 1 / i
                 a = clamp(
                     a * (1 - (GAME.questTime - .1) * (0.62 * GAME.floor + .26) * k),
                     GAME.faultWrong and not URM and i * .26 or 0, 1
