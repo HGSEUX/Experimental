@@ -10,8 +10,8 @@ d.normal = {
     { time = 6,   event = function() GAME.boardDim = { .5, .5, .5 } end },
     { time = 7,   event = function() GAME.boardDim = { .8, .8, .8 } end },
     { time = 8,   event = function() GAME.boardDim = { .3, .3, .3 } end },
-    { time = 9,   event = function() GAME.boardDim = { .1, .1, .1 } end },
-    { time = 10,   event = { 'dmgTimerMul', -.9, 'animDuration', 1 },                   text = "THE END SETS IN_",          desc = "TimerSpeed++++++" },
+    { time = 299,   event = function() GAME.boardDim = { .1, .1, .1 } end },
+    { time = 300,    event = { 'dmgTimerMul', -.1, 'animDuration', 1 },                   text = "FATIGUE SETS IN_",          desc = "TimerSpeed++" },
     { time = 0,     event = function() GAME.setFatigueColor('norm') end },
     { time = 301,   event = function() GAME.boardDim = { 1, 1, 1 } end },
 
