@@ -3182,8 +3182,8 @@ function GAME.update(dt)
     if M.GV > 0 and not GAME.gravTimer and (URM and M.GV == 2 or GAME.questTime >= 2.6) and GAME.questTime - dt < 2.6 then
         GAME.gravTimer = GAME.gravDelay
     end
-    if M.EX == 2 and GAME.floorTime > 30 then
-        GAME.dmgWrong = GAME.dmgWrong + 0.05 * dt
+    if M.EX == 2 and GAME.floorTime > 1 then
+        GAME.dmgWrong = GAME.dmgWrong + 0.12 * dt
     end
     if GAME.reviveTime then
         GAME.reviveTime = GAME.reviveTime + dt
@@ -3226,7 +3226,7 @@ function GAME.update(dt)
     if not GAME.DPlock then
         if M.EX == 2 then
             if not URM then
-                GAME.height = GAME.height - dt * (GAME.floor * (GAME.floor + 1) + 10) / 20
+                GAME.height = GAME.height - dt * ((GAME.floor * (2 * GAME.floor) + 10) / 15 + GAME.floor / 4)
                 GAME.height = max(GAME.height, Floors[GAME.floor - 1].top)
             else
                 if GAME.negFloor > 0 then
