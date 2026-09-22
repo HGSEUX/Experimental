@@ -11,7 +11,7 @@ d.normal = {
     { time = 7,   event = function() GAME.boardDim = { .8, .8, .8 } end },
     { time = 8,   event = function() GAME.boardDim = { .3, .3, .3 } end },
     { time = 9,   event = function() GAME.boardDim = { .1, .1, .1 } end },
-    { time = 10,   event = { 'dmgTimerMul', -.9, 'animDuration', 1, 'dmgTimerMul', -.35 },                   text = "THE END SETS IN_",          desc = "TimerSpeed++++++" },
+    { time = 10,   event = { 'dmgTimerMul', -.9, 'animDuration', 1 },                   text = "THE END SETS IN_",          desc = "TimerSpeed++++++" },
     { time = 0,     event = function() GAME.setFatigueColor('norm') end },
     { time = 301,   event = function() GAME.boardDim = { 1, 1, 1 } end },
 
