@@ -405,17 +405,13 @@ function GAME.getComboName(list, mode)
         if combo then
             fstr = combo.name:atomize()
             if URM and M.DH == 2 then
-                -- Shuffle letters except first and last
-                rem(fstr, #fstr)
-                local e = rem(fstr)
-                rem(fstr, 1)
-                local s = rem(fstr, 1)
-                TABLE.shuffle(fstr)
-                ins(fstr, 1, s)
-                ins(fstr, 1, "\"")
-                ins(fstr, e)
-                ins(fstr, "\"")
-            end
+                -- shuffle letters
+    rem(fstr, #fstr)
+    rem(fstr, 1)
+    TABLE.shuffle(fstr)
+    ins(fstr, 1, "\"")
+    ins(fstr, "\"")
+end
             -- Random gray
             for i = #fstr, 1, -1 do
                 ins(fstr, i, { MATH.rand(.872, 1), MATH.rand(.872, 1), MATH.rand(.872, 1) })
