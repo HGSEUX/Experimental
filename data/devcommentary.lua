@@ -68,9 +68,7 @@ return {
     ]],
 
     ['rEX'] = STRING.trimIndent [[
-        Until I write this, there are still only 2 players mastered rEX in QP2, way too hard for everyone to even have a try.
-        I tried to shrink cards spacing furthermore, but that turns out to be too hard, so I abandoned this idea.
-        Anyways, Zenith Clicker's aim is to let everyone enjoy all mods! Just practice a few weeks to beat rEX here! Or use AS to skip the challenge :>
+        THE UNLIMITED CAPACITY OF YOUR AMBITION IS TOO SUBTLE FOR EVEN THE UNIVERSE TO NOTICE.
     ]],
     ['rNH'] = STRING.trimIndent [[
         I want to reproduce the feeling of "classic" like what QP2 does, so I tried many combinations of "limited next queue" "no cancel" "no reset button".
@@ -83,9 +81,7 @@ return {
         Being lenient, it's the key to make a game enjoyable, and sometimes helps creating more possibility of strategies. Go try speedrunning with it now!
     ]],
     ['rGV'] = STRING.trimIndent [[
-        20G Tetris players love pure speed. So let's go faster, just faster, and nothing else changed.
-        And being lenient: pause the timer for a while on passing previous quest, and reset the timer on wrong commit & reset cards.
-        You said you didn't noticed that? Good, now you know how many details I added :>
+        THE SPEED IS BEYOND COLLAPSE. ONLY FOR IT TO BE FLATTENED BY THE EVENT HORIZON.
     ]],
     ['rVL'] = STRING.trimIndent [[
         Double clicks? Quadruple clicks! Due to health reasons, Left+Right click is allowed here, it's still very tiring to double double clicks for each card,
@@ -94,14 +90,10 @@ return {
         Tips: EX or any reversed mod activates "hard mode", reducing your XP gain from selecting (clearing single gives 1 atk in QP2)
     ]],
     ['rDH'] = STRING.trimIndent [[
-        When I came to design this mod, QP2's rDH was still "messy garbage + no cancelling", not the current "messy garbage + dig to attack" one
-        so I had no idea about how rDH should be, then I saw the "naming every combo" spreadsheet in tetrio community, it could be the answer...?
-        Anyways it was chosen, rDH changes all quests into... maybe it's not much related but it introduces community interactions, so fun!
+THE CODES LEFT BEHIND, NEVER TO BEING OVERCOME BY THE VERY CREATURES MAGICALLY FORMED FROM ITS UNIVERSE.
     ]],
     ['rIN'] = STRING.trimIndent [[
-        Time to play real invisible! Reversed invisible should be really invisible. Let's hide quests after a few seconds...
-        Wait, should we just hide all of them, which could be too hard, or only hiding current one, which could be too easy if you just pre-read one quest?
-        Maybe I can take the compromise: current one first, then the latter ones. And don't forget to be lenient: show quests when player make mistake.
+      INFORMATION DECAYS BEFORE IT EVEN EXISTED.  
     ]],
     ['rAS'] = STRING.trimIndent [[
         Just like in QP2, rAS makes player stronger but also more fragile. So let's take the +1 attack on B2B x 4+,
@@ -115,8 +107,7 @@ return {
     ]],
 
     ['uEX'] = STRING.trimIndent [[
-        No more leniency. Cards spacing tightened.
-        I doubt is it possible to drop from F10 to...
+        AGAINST THE UNLIMITED--THERE IS BEYOND.
     ]],
     ['uNH'] = STRING.trimIndent [[
         No more leniency. No XP protection, no Surge attack.
@@ -125,16 +116,16 @@ return {
         No more leniency. Let's shuffle the whole deck on each pass.
     ]],
     ['uGV'] = STRING.trimIndent [[
-        No more leniency. Timer starts immediately and never resets.
+        WITH NO ESCAPE, THERE IS NO EXISTENCE. 
     ]],
     ['uVL'] = STRING.trimIndent [[
         No more leniency. Everything must be clicked 4 times.
     ]],
     ['uDH'] = STRING.trimIndent [[
-        No more leniency. All phrases are scrambled letter by letter.
+        ABANDONED INFORMATION, LEFT IN THIN AIR, NEVER TO BE NOTICED AND UNDERSTOOD BY THE VERY MEANING OF THE VERSES THEMSELVES.
     ]],
     ['uIN'] = STRING.trimIndent [[
-        No more leniency. Quests will never show again.
+        EVERYTHING ENDLESSLY DOES NOT EXIST IN THE FIRST PLACE.
     ]],
     ['uAS'] = STRING.trimIndent [[
         No more leniency. Flipping a card twice ends the run.
