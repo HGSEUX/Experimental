@@ -204,7 +204,7 @@ function Card:setActive(auto, key)
                     CD[(p + table.remove(l, rnd(3, 4)) - 1) % #CD + 1]:setActive(true)
                     CD[(p + table.remove(l, rnd(1, 2)) - 1) % #CD + 1]:setActive(true)
                     if GAME.floor < 10 and GAME.gigaspeed then GAME.achv_felMagicBurnt = true end
-                    if URM then return GAME.takeDamage(1e99, 'wrong') end
+                    if URM then return GAME.takeDamage(4.5, 'wrong') end
                 end
                 SFX.play('wound')
             else
