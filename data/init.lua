@@ -29,7 +29,7 @@ GravityTimer = {
     { 9.0, 8.0, 7.5, 7.0, 6.5, 6.0, 5.5, 5.0, 4.5, 4.0 },
     { 1.0, 0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.3, 0.2 },
 }
-UltraMessinessMaxUnmoved = { 5, 5, 5, 5, 4, 4, 4, 3, 3, 2 }
+UltraMessinessMaxUnmoved = { 3, 3, 3, 2, 2, 2, 2, 1, 1, 1 }
 
 PieceData = {
     { id = 'nightcore', sfx = 'z', text = { COLOR.lR, "Z" }, piece = { COLOR.lR, CHAR.brik.Z }, popup = { COLOR.lR, "Z - Nightcore" } },
