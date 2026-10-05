@@ -2247,7 +2247,7 @@ GAME.refreshLayout()
         end
 
         if M.NH < 2 then GAME.cancelAll(true) end
-        GAME.cancelBurn()
+        if M.AS == 1 then GAME.cancelBurn() end
         GAME.dmgTimer = min(GAME.dmgTimer + max(2.6, GAME.dmgDelay / 2), GAME.dmgDelay)
 
         GAME.achv_artistTrinityBurnt = false
