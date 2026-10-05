@@ -2196,7 +2196,7 @@ function GAME.commit(auto)
             if URM then
                 for i = 1, #CD do uMS_CDsnapshot[i] = CD[i] end
                 local f = max(GAME.floor, GAME.negFloor)
-                local messiness_expected = 3 + 2 * f
+                local messiness_expected = 22 + 1 * f
                 local maxUnmoved = UltraMessinessMaxUnmoved[f]
                 local cnt = 0
                 repeat
