@@ -1396,7 +1396,7 @@ function scene.overDraw()
             if M.IN == 2 then
                 local k = 1 / i
                 a = clamp(
-                    a * (1 - GAME.questTime * (1.31 * GAME.floor + 1) * k),
+                    a * (1 - GAME.questTime * (1.15 * GAME.floor + 0.5) * k),
                     GAME.faultWrong and not URM and i * .26 or 0, 1
                 )
             end
