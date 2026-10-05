@@ -2192,7 +2192,6 @@ function GAME.commit(auto)
 
         -- rMS shuffle
         if M.MS == 2 then
-            local lastPos = GAME.lastFlip and TABLE.find(CD, CD[GAME.lastFlip]) or -26
             if URM then
                 for i = 1, #CD do uMS_CDsnapshot[i] = CD[i] end
                 local f = max(GAME.floor, GAME.negFloor)
@@ -2200,18 +2199,17 @@ function GAME.commit(auto)
                 local maxUnmoved = UltraMessinessMaxUnmoved[f]
                 local cnt = 0
                 repeat
-                    if lastPos > 1 + 1 then
-                        TABLE.clear(uMS_temp)
-                        for i = 1, lastPos - 1 do uMS_temp[i] = CD[i] end
-                        TABLE.shuffle(uMS_temp)
-                        for i = 1, #uMS_temp do CD[i] = uMS_temp[i] end
-                    end
-                    if lastPos < #CD - 1 then
-                        TABLE.clear(uMS_temp)
-                        for i = lastPos + 1, #CD do uMS_temp[i - lastPos] = CD[i] end
-                        TABLE.shuffle(uMS_temp)
-                        for i = lastPos + 1, #CD do CD[i] = uMS_temp[i - lastPos] end
-                    end
+                    TABLE.clear(uMS_temp)
+
+for i = 1, #CD do
+    uMS_temp[i] = CD[i]
+end
+
+TABLE.shuffle(uMS_temp)
+
+for i = 1, #CD do
+    CD[i] = uMS_temp[i]
+end
 
                     cnt = cnt + 1
                     local unmoveCnt = 0
@@ -2229,20 +2227,23 @@ function GAME.commit(auto)
                     end
                 until cnt >= 126
             else
-                local w = max(GAME.floor, GAME.negFloor) <= 8 and 2 or 3
-                local r
-                repeat r = rnd(#CD - w + 1) until r > lastPos + 1 or r + w < lastPos
-                if w == 2 then
-                    CD[r], CD[r + 1] = CD[r + 1], CD[r]
-                elseif w == 3 then
-                    if MATH.roll() then
-                        CD[r], CD[r + 1], CD[r + 2] = CD[r + 2], CD[r], CD[r + 1]
-                    else
-                        CD[r], CD[r + 1], CD[r + 2] = CD[r + 1], CD[r + 2], CD[r]
-                    end
-                end
-            end
-            GAME.refreshLayout()
+    local w = max(GAME.floor, GAME.negFloor) <= 6 and 5 or 6
+    local r = rnd(#CD - w + 1)
+    
+    -- Save the selected cards
+    local temp = {}
+    for i = 1, w do
+        temp[i] = CD[r + i - 1]
+    end
+
+    -- Choose a random cyclic rotation
+    local rotation = rnd(w - 1)
+
+    for i = 1, w do
+        CD[r + i - 1] = temp[(i + rotation - 1) % w + 1]
+    end
+end
+GAME.refreshLayout()
         end
 
         if M.NH < 2 then GAME.cancelAll(true) end
