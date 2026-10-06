@@ -2420,7 +2420,7 @@ function GAME.start()
 
     -- Params
     GAME.attackMul = GAME.isUltraRun and .62 or 1
-    GAME.maxQuestCount = M.NH == 2 and 2 or 3
+    GAME.maxQuestCount = M.NH == 2 and 1 or 3
     GAME.maxQuestSize = (M.NH < 2 and M.DH == 2) and 3 or 4
     GAME.extraQuestBase = M.NH == 2 and (M.DH > 0 and 2.42 - M.DH or 1.26) or M.DH == 1 and 0.26 or 0
     GAME.extraQuestVar = M.DH == 1 and .626 or 1
@@ -2429,7 +2429,7 @@ function GAME.start()
     GAME.dmgWrong = 1
     GAME.dmgWrongExtra = 0
     GAME.dmgTime = 2
-    GAME.dmgTimerMul = 1
+    GAME.dmgTimerMul = M.GV == 2 and 0.33 or 1
     GAME.dmgDelay = 15
     GAME.dmgCycle = 5
     GAME.lifeLeak = 0
