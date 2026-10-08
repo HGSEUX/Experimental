@@ -2011,7 +2011,7 @@ function GAME.commit(auto)
 
             SFX.play(MATH.roll(.626) and 'clearspin' or 'clearquad', .5)
             if M.NH < 2 then attack = attack + 1 end
-            if M.AS == 2 and GAME.chain >= 4 then attack = attack + 1 end
+            if M.AS == 2 then attack = attack + 4 end
             xp = xp + 3
 
             if correct == 1 then
@@ -2404,7 +2404,7 @@ function GAME.start()
     GAME.xpLockLevel = GAME.xpLockLevelMax
     GAME.xpLockTimer = 0
     GAME.rankupLast = false
-    GAME.leakSpeed = ((M.EX > 0 or M.DP == 2) and 5 or 3) + (GAME.fastLeak and 8 or 0)
+    GAME.leakSpeed = ((M.EX > 0 or M.DP == 2) and 6 or 3) + (GAME.fastLeak and 8 or 0)
 
     -- Floor
     GAME.floor = 0
@@ -2422,14 +2422,14 @@ function GAME.start()
     GAME.attackMul = GAME.isUltraRun and .62 or 1
     GAME.maxQuestCount = M.NH == 2 and 1 or 3
     GAME.maxQuestSize = (M.NH < 2 and M.DH == 2) and 3 or 4
-    GAME.extraQuestBase = M.NH == 2 and (M.DH > 0 and 2.42 - M.DH or 1.26) or M.DH == 1 and 0.26 or 0
+    GAME.extraQuestBase = M.NH == 2 and (M.DH > 0 and 3.88 - M.DH or 2.62) or M.DH == 1 and 0.26 or 0
     GAME.extraQuestVar = M.DH == 1 and .626 or 1
     GAME.questFavor = 0 -- Initialized in GAME.upFloor()
     GAME.dmgHeal = 2
-    GAME.dmgWrong = 1
+    GAME.dmgWrong = M.VL == 2 and (URM and 4.5 or 3) or 1
     GAME.dmgWrongExtra = 0
-    GAME.dmgTime = 2
-    GAME.dmgTimerMul = M.GV == 2 and 0.33 or 1
+    GAME.dmgTime = M.VL == 2 and (URM and (M.GV == 2 and 4 or 9.5) or 6) or 2
+    GAME.dmgTimerMul = M.GV == 2 and 0.42 or 1
     GAME.dmgDelay = 15
     GAME.dmgCycle = 5
     GAME.lifeLeak = 0
