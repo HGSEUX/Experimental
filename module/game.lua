@@ -2426,10 +2426,10 @@ function GAME.start()
     GAME.extraQuestVar = M.DH == 1 and .626 or 1
     GAME.questFavor = 0 -- Initialized in GAME.upFloor()
     GAME.dmgHeal = 2
-    GAME.dmgWrong = M.VL == 2 and (URM and 4.5 or 3) or 1
+    GAME.dmgWrong = M.VL == 2 and (URM and (M.GV == 2 and 2.5 or 4.5) or 3) or 1
     GAME.dmgWrongExtra = 0
-    GAME.dmgTime = M.VL == 2 and (URM and (M.GV == 2 and 4 or 9.5) or 6) or 2
-    GAME.dmgTimerMul = M.GV == 2 and 0.42 or 1
+    GAME.dmgTime = M.VL == 2 and (URM and (M.GV == 2 and 3.5 or 9.5) or (M.GV == 2 and 4 or 6)) or 2
+    GAME.dmgTimerMul = M.GV == 2 and 0.4 or 1
     GAME.dmgDelay = 15
     GAME.dmgCycle = 5
     GAME.lifeLeak = 0
