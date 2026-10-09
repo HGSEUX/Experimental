@@ -2421,9 +2421,9 @@ function GAME.start()
     -- Params
     GAME.attackMul = GAME.isUltraRun and .62 or 1
     GAME.maxQuestCount = M.NH == 2 and 1 or 3
-    GAME.maxQuestSize = (M.NH < 2 and M.DH == 2) and 6 or 8
-    GAME.extraQuestBase = M.NH == 2 and (M.DH > 0 and 3.88 - M.DH or 2.62) or M.DH == 1 and 0.26 or 0
-    GAME.extraQuestVar = M.DH == 1 and .626 or 1
+    GAME.maxQuestSize = (M.NH < 2 and M.DH == 2) and 4 or 5
+    GAME.extraQuestBase = M.NH == 2 and (M.DH > 0 and 2.42 - M.DH or 1.26) or M.DH == 1 and 0.26 or 0
+    GAME.extraQuestVar = M.DH == 1 and (M.NH == 2 and 3.626 or .626) or (M.NH == 2 and 3 or 1)
     GAME.questFavor = 0 -- Initialized in GAME.upFloor()
     GAME.dmgHeal = 2
     GAME.dmgWrong = M.VL == 2 and (URM and (M.GV == 2 and 2.5 or 4.5) or 3) or 1
