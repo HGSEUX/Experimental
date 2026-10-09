@@ -21,7 +21,7 @@ d.normal = {
     { time = 207,   event = function() GAME.boardDim = { .8, .8, .8 } end },
     { time = 208,   event = function() GAME.boardDim = { .3, .3, .3 } end },
     { time = 209,   event = function() GAME.boardDim = { .1, .1, .1 } end },
-    { time = 210,   event = { 'dmgCycle', -.5, 'dmgWrong', 1 },                          text = "YOUR BODY GROWS WEAK_",     desc = "DmgCycle--   Damage++" },
+    { time = 210,   event = { 'dmgCycle', -.05, 'dmgWrong', 1 },                          text = "YOUR BODY GROWS WEAK_",     desc = "DmgCycle--   Damage++" },
     { time = 0,     event = function() GAME.setFatigueColor('norm') end },
     { time = 211,   event = function() GAME.boardDim = { 1, 1, 1 } end },
 
@@ -51,14 +51,14 @@ d.normal = {
     { time = 297,   event = function() GAME.boardDim = { .8, .8, .8 } end },
     { time = 298,   event = function() GAME.boardDim = { .3, .25, .25 } end },
     { time = 299,   event = function() GAME.boardDim = { .1, .05, .05 } end },
-    { time = 300,   event = { 'dmgTimerMul', -.05, 'dmgCycle', -.5, 'animDuration', 1 }, text = "THIS IS THE END.",          desc = "TimerSpeed++   DmgCycle--", final = true },
+    { time = 300,   event = { 'dmgTimerMul', -.05, 'dmgCycle', -.05, 'animDuration', 1 }, text = "THIS IS THE END.",          desc = "TimerSpeed++   DmgCycle--", final = true },
     { time = 0,     event = function() GAME.setFatigueColor('end') end },
     { time = 302,   event = { 'dmgTimerMul', -.05 } },
     { time = 305,   event = { 'dmgTimerMul', -.05 } },
     { time = 310,   event = { 'dmgTimerMul', -.05 } },
     { time = 315,   event = function() GAME.boardDim = { 1, 1, 1 } end },
 
-    { time = 360,   event = { 'atkBufferCap', 6, 'animDuration', 2, 'maxQuestSize', 1 }, text = "FAREWELL.",                 desc = "QuestDifficulty++++++",     duration = 26, color = 'lB', },
+    { time = 360,   event = { 'atkBufferCap', 6, 'animDuration', 2 }, text = "FAREWELL.",                 desc = "QuestDifficulty++++++",     duration = 26, color = 'lB', },
     { time = 365,   event = { 'atkBufferCap', 6, 'animDuration', 4, 'extraQuestVar', 1 } },
     { time = 370,   event = { 'atkBufferCap', 6, 'animDuration', 4 } },
     { time = 380,   event = { 'animDuration', 5 }, --[[21]] },
@@ -107,7 +107,7 @@ d.rEX = {
     { time = 177,   event = function() GAME.boardDim = { .8, .8, .8 } end },
     { time = 178,   event = function() GAME.boardDim = { .3, .2, .2 } end },
     { time = 179,   event = function() GAME.boardDim = { .2, 0, 0 } end },
-    { time = 180,   event = { 'dmgCycle', -1, 'animDuration', 1 },                    text = "PROTESTERS LINE THE STREETS_",    desc = "DmgCycle--" },
+    { time = 180,   event = { 'dmgCycle', -.2, 'animDuration', 1 },                    text = "PROTESTERS LINE THE STREETS_",    desc = "DmgCycle--" },
     { time = 0,     event = function() GAME.setFatigueColor('norm') end },
     { time = 181,   event = function() GAME.boardDim = { 1, 1, 1 } end },
 
@@ -117,7 +117,7 @@ d.rEX = {
     { time = 207,   event = function() GAME.boardDim = { .8, .8, .8 } end },
     { time = 208,   event = function() GAME.boardDim = { .3, .2, .2 } end },
     { time = 209,   event = function() GAME.boardDim = { .2, 0, 0 } end },
-    { time = 210,   event = { 'dmgTimerMul', -.2, 'dmgWrong', 2 },                    text = "YOUR CLOSEST ALLIES DEFECT_",     desc = "TimerSpeed++   Damage++" },
+    { time = 210,   event = { 'dmgTimerMul', -.13, 'dmgWrong', 2 },                    text = "YOUR CLOSEST ALLIES DEFECT_",     desc = "TimerSpeed++   Damage++" },
     { time = 0,     event = function() GAME.setFatigueColor('norm') end },
     { time = 211,   event = function() GAME.boardDim = { 1, 1, 1 } end },
 
@@ -127,7 +127,7 @@ d.rEX = {
     { time = 237,   event = function() GAME.boardDim = { .8, .8, .8 } end },
     { time = 238,   event = function() GAME.boardDim = { .3, .2, .2 } end },
     { time = 239,   event = function() GAME.boardDim = { .2, 0, 0 } end },
-    { time = 240,   event = { 'dmgTimerMul', -.1, 'dmgHeal', -1, 'animDuration', 1 }, text = "PARANOIA CLOUDS YOUR JUDGEMENT_", desc = "TimerSpeed++   Heal--" },
+    { time = 240,   event = { 'dmgTimerMul', -.08, 'dmgHeal', -1, 'animDuration', 1 }, text = "PARANOIA CLOUDS YOUR JUDGEMENT_", desc = "TimerSpeed++   Heal--" },
     { time = 0,     event = function() GAME.setFatigueColor('norm') end },
     { time = 241,   event = function() GAME.boardDim = { 1, 1, 1 } end },
     { time = 242,   event = { 'dmgTimerMul', -.05 } },
@@ -139,7 +139,7 @@ d.rEX = {
     { time = 267,   event = function() GAME.boardDim = { .8, .8, .8 } end },
     { time = 268,   event = function() GAME.boardDim = { .3, .2, .2 } end },
     { time = 269,   event = function() GAME.boardDim = { .2, 0, 0 } end },
-    { time = 270,   event = { 'dmgCycle', -.5, 'dmgWrong', 1 },                       text = "THE REVOLUTION HAS BEGUN_",       desc = "DmgCycle--   Damage++" },
+    { time = 270,   event = { 'dmgCycle', -.05, 'dmgWrong', 1 },                       text = "THE REVOLUTION HAS BEGUN_",       desc = "Damage++" },
     { time = 0,     event = function() GAME.setFatigueColor('norm') end },
     { time = 271,   event = function() GAME.boardDim = { 1, 1, 1 } end },
 
@@ -154,7 +154,7 @@ d.rEX = {
     { time = 297,   event = function() GAME.boardDim = { .3, .1, .1 } end },
     { time = 298,   event = function() GAME.boardDim = { .2, 0, 0 } end },
     { time = 299,   event = function() GAME.boardDim = { 0, 0, 0 } end },
-    { time = 300,   event = { 'dmgTimerMul', -.1, 'animDuration', 1 },                text = "THE END OF AN ERA.",              desc = "TimerSpeed++++",         duration = 10, final = true },
+    { time = 300,   event = { 'dmgTimerMul', -.08, 'animDuration', 1 },                text = "THE END OF AN ERA.",              desc = "TimerSpeed++++",         duration = 10, final = true },
     { time = 0,     event = function() GAME.setFatigueColor('end') end },
     { time = 303,   event = { 'dmgTimerMul', -.05 } },
     { time = 306,   event = { 'dmgTimerMul', -.05 } },
@@ -169,7 +169,7 @@ d.rEX = {
     { time = 319.4, event = function() GAME.boardDim = { .1, 0, 0 } end },
     { time = 320,   event = { 'dmgTimerMul', -.02, 'lifeLeak', .5 },                  text = "BLACK OUT.",                      desc = "HP leak",                color = 'DR' },
     { time = 0,     event = function() GAME.setFatigueColor('kill') end },
-    { time = 1e99 }, -- Total: dmgTimerMul-90%, Cycle-1.5, Wrong+5, 
+    { time = 1e99 }, 
 }
 
 d.rDP = {
@@ -312,7 +312,7 @@ d.rDP = {
     { time = 277,   event = function() GAME.boardDim = { .8, .8, .8 } end },
     { time = 278,   event = function() GAME.boardDim = { .3, .2, .2 } end },
     { time = 279,   event = function() GAME.boardDim = { .2, 0, 0 } end },
-    { time = 280,   event = { 'dmgTimerMul', -.2 },                   text = "YOU CAN'T BE BOTHERED ANYMORE_",             desc = "TimerSpeed+++",         duration = 10 },
+    { time = 280,   event = { 'dmgTimerMul', -.15 },                   text = "YOU CAN'T BE BOTHERED ANYMORE_",             desc = "TimerSpeed+++",         duration = 10 },
     { time = 0,     event = function() GAME.setFatigueColor('norm') end },
     { time = 281,   event = function() GAME.boardDim = { 1, 1, 1 } end },
 
