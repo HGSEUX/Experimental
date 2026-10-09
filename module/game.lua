@@ -715,7 +715,7 @@ function GAME.genQuest()
             if M.NH == 2 then
                 -- More probability to repeat last quest's mods on rNH
                 for i = 2, #lastQ.combo do
-                    pool[lastQ.combo[i]] = pool[lastQ.combo[i]] * 3.5
+                    pool[lastQ.combo[i]] = pool[lastQ.combo[i]] * 0.23
                 end
             end
         end
