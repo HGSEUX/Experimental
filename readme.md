@@ -2,11 +2,17 @@
 
     Welcome to Zenith Clicker, where the goal is to select required Tarot cards and send players to scale the tower.  
     As you keep climbing, more tricky players will come!  
-    There's a leaderboard for daily challenge, how high can you reach?
+    There's a leaderboard for daily challenge (can only be supported in devices with cUrl), how high can you reach?
 
 > Almost all art and sounds are from [TETR.IO](https://tetr.io), a modern yet familiar online stacker game by osk with amazing graphics and music.
 
-**WARNING**: This game requires the knowledge of the mechanics and mods of TETR.IO's Quick Play 2, or you won't get much fun.  
+**DISCLAIMER**: What you are currently viewing is NOT the original version of Zenith Clicker. This is a modified version (a fork) that you may have come across.
+
+If you are curious about this fork, feel free to explore! If you are looking for the original game, visit the original repository here:
+
+https://github.com/MrZ626/ZenithClicker
+
+**REMINDER**: This game may require the knowledge of the mechanics and mods of TETR.IO's Quick Play 2, or you won't get much fun.  
 If you like the Quick Play 2 mode but don't know much about it, check another repo of it: [QP2 Documentation](https://github.com/MrZ626/io_qp2_rule) (in Chinese, with some translated forks). It's nearly a full explanation of QP2, including many technical details behind the scenes, which can allow you to play QP2 with better strats!
 
 **Zenith Clicker** is a game inspired by the Quick Play 2 mod selection menu of TETR.IO. Its interactive feel is really not good for quickly picking the mods needed, and there's still no convenient way to know which mods are included in a specific combo.
@@ -41,12 +47,12 @@ Pass quests with one click at most on each card to get "perfect pass", which giv
 
 Each mod creates a unique experience by twisting the rules, but also increases the difficulty.
 
-## Mod Effects (may not be exactly correct & complete)
+## Mod Effects (may not be exactly complete)
 
 ### Expert (`EX`)
 
 - Cards are **10px (9%)** closer together.
-- Climb speed **decays 67% faster.**
+- Climb speed **decays substantially faster.**
 - Cards are deactivated after failure.
 - All actions happen on button **release** instead of button press.
 - AS keyboard hints are not shown (if enabled).
@@ -107,28 +113,31 @@ Make sure you've discovered most contents before reading this section!
 - Quest hints take longer to appear.
 - Activating a correct card for the first time no longer gives +1 XP.
 
+**EXPECT REVERSED MODS TO BE WAY HARDER THAN UPRIGHT MODS!**
+
 ### The Tyrant (`rEX`)
 
 - **Has ALL the effects of Expert.**
 - Fatigue is much harsher.
 - Passing a quest with Duo no longer gives +2 attack.
-- **You fall downward** instead of passively climbing. The speed increases quadratically from **0.6m/s** on Floor 1 to **6m/s** on Floor 10.
-- Staying on the same floor for over 30 seconds will slowly increase damage on mistake.
+- **You fall downward** instead of passively climbing. The speed increases quadratically from approximately **≈1.1m/s** on Floor 1 to **≈16.1m/s** on Floor 10.
+- the longer you play **a run** on this mod, damage on **mistake** increases until eventually even a **single mistake** can cause **instant defeat**.
 
 ### Asceticism (`rNH`)
 
-- Disable +1 attack on perfect pass.
-- Reduce length of **next queue** to 2.
+- Attack is substantially **reduced**
+- Reduce length of **next queue** to 1. 
 - Cards are **not deselected** after committing.
+- “RESET” is **disabled** (with the **exception** of **AS/rAS/uAS**, since it replaces **RESET** with **SPIN**)
 
 ### Loaded Dice (`rMS`)
 
 - Cards are shuffled at the start of **every floor**. This effect gets stronger for every odd-numbered floor reached, with cards straying further from their correct positions.
-- On commit, **swap two cards**, three on Floor 9/10. But last flipped card is guaranteed not to be swapped.
+- On commit, **shuffle some cards at a cyclic permutation**.
 
 ### Freefall (`rGV`)
 
-- The auto-commit timer starts at **3.2s** and decreases every floor down to a minimum of **2s**.
+- The auto-commit timer starts at **2s** and decreases every floor down to a minimum of **1s**.
 
 ### Last Stand (`rVL`)
 
@@ -146,7 +155,7 @@ Make sure you've discovered most contents before reading this section!
 - **Has ALL the effects of Invisible, plus...**
 - Quest hints are **not shown** at all!
 - The 1st quest **fade away** after a short time, faster as you reach higher floors. (but reappear if you make a wrong commit)
-- The 2nd and 3rd quests also fade away but slower (4x & 9x without DP, 2x & 9x with DP).
+- The 2nd and 3rd quests also fade away but slightly slower (2x % 3x).
 
 | Floor |          Fade Time (1st quest)          |
 | :---: | :-------------------------------------: |
