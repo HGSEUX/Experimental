@@ -2014,6 +2014,7 @@ function GAME.commit(auto)
 
             SFX.play(MATH.roll(.626) and 'clearspin' or 'clearquad', .5)
             if M.NH < 2 then attack = attack + 1 end
+            if M.NH == 2 then attack = attack - 2 end 
             if M.AS == 2 then attack = attack + 4 end
             xp = xp + 3
 
