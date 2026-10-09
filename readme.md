@@ -1,4 +1,4 @@
-# Zenith Clicker
+# Zenith Clicker: Unforgiven: A True Challenger
 
     Welcome to Zenith Clicker, where the goal is to select required Tarot cards and send players to scale the tower.  
     As you keep climbing, more tricky players will come!  
@@ -6,9 +6,9 @@
 
 > Almost all art and sounds are from [TETR.IO](https://tetr.io), a modern yet familiar online stacker game by osk with amazing graphics and music.
 
-**DISCLAIMER**: What you are currently viewing is NOT the original version of Zenith Clicker. This is a modified version (a fork) that you may have come across.
+**DISCLAIMER**: **What you are currently viewing is NOT the original version of Zenith Clicker. This is a modified version (a fork) that you may have come across.**
 
-If you are curious about this fork, feel free to explore! If you are looking for the original game, visit the original repository here:
+**If you are curious about this fork, feel free to explore! If you are looking for the original game, visit the original repository here:**
 
 https://github.com/MrZ626/ZenithClicker
 
