@@ -1771,7 +1771,7 @@ function GAME.swapControl()
 end
 
 function GAME.cancelAll(instant)
-if M.NH == 2 then 
+if M.NH == 2 and M.AS == 0 then 
         return 
     end
     if URM and M.VL == 2 and not UltraVlCheck('reset', instant) then return end
