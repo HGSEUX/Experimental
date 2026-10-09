@@ -6,11 +6,17 @@
 
 > Almost all art and sounds are from [TETR.IO](https://tetr.io), a modern yet familiar online stacker game by osk with amazing graphics and music.
 
+
+
+
 **DISCLAIMER**: **What you are currently viewing is NOT the original version of Zenith Clicker. This is a modified version (a fork) that you may have come across.**
 
 **If you are curious about this fork, feel free to explore! If you are looking for the original game, visit the original repository here:**
 
 https://github.com/MrZ626/ZenithClicker
+
+
+
 
 **REMINDER**: This game may require the knowledge of the mechanics and mods of TETR.IO's Quick Play 2, or you won't get much fun.  
 If you like the Quick Play 2 mode but don't know much about it, check another repo of it: [QP2 Documentation](https://github.com/MrZ626/io_qp2_rule) (in Chinese, with some translated forks). It's nearly a full explanation of QP2, including many technical details behind the scenes, which can allow you to play QP2 with better strats!
