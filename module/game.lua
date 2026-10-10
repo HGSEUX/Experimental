@@ -706,7 +706,7 @@ function GAME.genQuest()
             -- Prevent 100% repeating
             pool[lastQ.combo[1]] = 0
             if M.NH == 2 then
-                -- More probability to repeat last quest's mods on rNH
+                -- less probability to repeat last quest's mods on rNH
                 for i = 2, #lastQ.combo do
                     pool[lastQ.combo[i]] = pool[lastQ.combo[i]] * 0.23
                 end
@@ -1935,7 +1935,7 @@ function GAME.commit(auto)
                 GAME.nixPrompt('keep_no_imperfect')
                 GAME.nixPrompt('pass_windup_inb2b')
             end
-            if M.AS == 2 then attack = 0 end
+            if M.NH == 2 then attack = 1 end
             xp = xp + 2
             if GAME.chain < 4 then
                 SFX.play('clearline', .62)
@@ -2007,7 +2007,7 @@ function GAME.commit(auto)
 
             SFX.play(MATH.roll(.626) and 'clearspin' or 'clearquad', .5)
             if M.NH < 2 then attack = attack + 1 end
-            if M.NH == 2 then attack = attack - 2 end 
+            if M.NH == 2 then attack = attack - 1 end 
             if M.AS == 2 then attack = attack + 4 end
             xp = xp + 3
 
