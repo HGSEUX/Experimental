@@ -1412,13 +1412,17 @@ function scene.overDraw()
 
     if not GAME.invisUI then
         -- Section time
-        if GAME.uiHide > 0 then
+        if GAME.uiHide > 0 and GAME.time > 1 then
             gc_replaceTransform(SCR.xOy_dr)
             local ox, oy = TEXTS.floorTime:getDimensions()
             gc_setColor(0, 0, 0, .626)
             gc_draw(TEXTS.floorTime, -10, -5 + 260 * (1 - GAME.uiHide), 0, .7, .7, ox, oy)
-            gc_setColor(.626, .626, .626, .626)
-            gc_draw(TEXTS.floorTime, -10, -5 + 260 * (1 - GAME.uiHide), 0, .7, .7, ox, oy)
+            if GAME.teramusic then
+                gc_setColor(GAME.giga_r, GAME.giga_g, GAME.giga_b, .626)
+            else
+                gc_setColor(.626, .626, .626, .626)
+            end
+            gc_draw(TEXTS.floorTime, -10 - 2, -5 - 2 + 260 * (1 - GAME.uiHide), 0, .7, .7, ox, oy)
         end
 
         -- UI
