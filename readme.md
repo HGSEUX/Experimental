@@ -7,6 +7,7 @@
 > Almost all art and sounds are from [TETR.IO](https://tetr.io), a modern yet familiar online stacker game by osk with amazing graphics and music.
 
 
+—-
 
 
 **DISCLAIMER**: **What you are currently viewing is NOT the original version of Zenith Clicker. This is a modified version (a fork) that you may have come across.**
@@ -16,6 +17,7 @@
 https://github.com/MrZ626/ZenithClicker
 
 
+—-
 
 
 **REMINDER**: This game may require the knowledge of the mechanics and mods of TETR.IO's Quick Play 2, or you won't get much fun.  
