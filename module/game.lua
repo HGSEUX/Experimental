@@ -361,7 +361,7 @@ function GAME.getComboZP(list)
 
     local hardCnt = table.concat(list):count('r')
     if m.EX then hardCnt = hardCnt + 1 end
-    if hardCnt >= 2 then zp = zp * 0.95 ^ (hardCnt - 1) end
+    if hardCnt >= 2 then zp = zp * 0.86 ^ (hardCnt - 1) end
 
     return zp
 end
