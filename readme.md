@@ -1,320 +1,316 @@
-# Zenith Clicker: Unforgiven: A True Challenger
+# Zenitha
 
-    Welcome to Zenith Clicker, where the goal is to select required Tarot cards and send players to scale the tower.  
-    As you keep climbing, more tricky players will come!  
-    There's a leaderboard for daily challenge (can only be supported in devices with cUrl), how high can you reach?
+An awesome, deluxe Pure-Lua game/app framework using Love2D.
 
-> Almost all art and sounds are from [TETR.IO](https://tetr.io), a modern yet familiar online stacker game by osk with amazing graphics and music.
+## How to start
 
+Add this repo as submodule in the root folder:
 
--
-
-
-**DISCLAIMER**: **What you are currently viewing is NOT the original version of Zenith Clicker. This is a modified version (a fork) that you may have come across.**
-
-**If you are curious about this fork, feel free to explore! If you are looking for the original game, visit the original repository here:**
-
-https://github.com/MrZ626/ZenithClicker
-
-
--
-
-
-**REMINDER**: This game may require the knowledge of the mechanics and mods of TETR.IO's Quick Play 2, or you won't get much fun.  
-If you like the Quick Play 2 mode but don't know much about it, check another repo of it: [QP2 Documentation](https://github.com/MrZ626/io_qp2_rule) (in Chinese, with some translated forks). It's nearly a full explanation of QP2, including many technical details behind the scenes, which can allow you to play QP2 with better strats!
-
-**Zenith Clicker** is a game inspired by the Quick Play 2 mod selection menu of TETR.IO. Its interactive feel is really not good for quickly picking the mods needed, and there's still no convenient way to know which mods are included in a specific combo.
-
-Powered by LÖVE & Zenitha & Lua ~~instead of slow web engine~~
-
-Credits:  
-**MrZ**: Programming, game design, general development  
-**CreepercraftYT**: Mod Icons & Card Art  
-**DJ Asriel**: Background reconstruction  
-**Flowerling & MattMayuga**: Text Revision  
-**flomikel, Spritzy Sheep & Obsidian**: Additional text writing  
-**Dr Ocelot**: Audio & music  
-**petrtech & Ronezkj15**: Extra music  
-**osk**: Founder & lead producer of TETR.IO  
-**Garbo**: Game & world designer of TETR.IO  
-**Frutigеr**: Font designer (D-Din-Pro)  
-**Mooniak**: Font designer (AbhayaLibre)  
-**Lorc, Delapouite & Quoting**: Some achievement icons (on https://game-icons.net, CC BY 3.0)
-
-## Community
-
-[Official Discord Server](https://discord.gg/thqhzSn72j)
-
-[Thread in TETR.IO Discord Server](https://discord.com/channels/673303546107658242/1345623182513541174)
-
-## How to Play
-
-After you start the game, you will see three mod combinations, which are called "quests", shown at the top of the screen. Select the mods which are contained by the first (largest) one, then press the `Start` button to commit.
-
-Pass quests with one click at most on each card to get "perfect pass", which gives extra attack and increases B2B. At B2Bx4, it starts charging up a huge Surge Attack that releases all at once at the end of your chain (on imperfect pass).
-
-Each mod creates a unique experience by twisting the rules, but also increases the difficulty.
-
-## Mod Effects (may not be exactly complete)
-
-### Expert (`EX`)
-
-- Cards are **10px (9%)** closer together.
-- Climb speed **decays substantially faster.**
-- Cards are deactivated after failure.
-- All actions happen on button **release** instead of button press.
-- AS keyboard hints are not shown (if enabled).
-
-### No Hold (`NH`)
-
-- You cannot manually deselect cards.
-
-### Messiness (`MS`)
-
-- Cards are **lightly shuffled** at the start of **F1 F2 F5 F7 F9**. The cards will always be in or adjacent to their correct position.
-
-### Gravity (`GV`)
-
-- **Automatically commit** some time after the first card flip. The timer starts at **9s** at floor 1, and decreases every floor until **4s** at floor 10. The timer will also automatically start if you flip no cards for 2.6s.
-
-### Volatility (`VL`)
-
-- Cards are **20px (18%)** further apart.
-- Cards must be pressed **twice** to activate, but deactivating still takes a single press.
-
-### Double Hole (`DH`)
-
-- Quests are harder.
-- Quests can sometimes be slightly shuffled.
-- TODO: add specifics to difficulty change
-
-### Invisible (`IN`)
-
-- All cards are **face down**.
-- Quest colours are desaturated.
-- Quest hints are only shown for a moment **every two seconds**..
-
-### All-Spin (`AS`)
-
-- You can flip cards with your keyboard: on ANSI QWERTY layout, the inputs are 1-9, Q-O, or A-L. If cards are shuffled by `(r)MS`, they are flipped based on their *position*, not by which card they are.
-- The RESET button is replaced with **SPIN**. Using SPIN quickly flips all cards one-by-one.
-- Flipping a card will apply a **burn** to it, indicated by it flashing yellow. Burns last **3s** and this duration increases by **0.5s per floor**. They can be removed by committing (even if the selected card is a wrong one) or pressing SPIN. Flipping a burned card will cause you to get **wounded**, force-flipping two cards. These cards do *not* get a Burn.
-
-### Duo (`DP`)
-
-- There are two "players" instead of one. You can swap players by activating the Duo card, or by completing the second quest in the queue (the cards will be highlighted pink while you do this).
-- If one player is incapacitated, your ascension is halved and quests becomes harder, but they can be revived by completing some revive prompts.
-- Quests are a bit harder.
-- TODO: specifics on tasks
-
-## SPOILERS
-
-<details>
-<summary>
-Make sure you've discovered most contents before reading this section!
-</summary>
-
-### Hard Mode
-
-**Expert and ALL reversed modifiers activate Hard Mode with the following effects:**
-
-- Quest hints take longer to appear.
-- Activating a correct card for the first time no longer gives +1 XP.
-
-**EXPECT REVERSED MODS TO BE WAY HARDER THAN UPRIGHT MODS!**
-
-### The Tyrant (`rEX`)
-
-- **Has ALL the effects of Expert.**
-- Fatigue is much harsher.
-- Passing a quest with Duo no longer gives +2 attack.
-- **You fall downward** instead of passively climbing. The speed increases quadratically from approximately **≈1.1m/s** on Floor 1 to **≈16.1m/s** on Floor 10.
-- the longer you play **a run** on this mod, damage on **mistake** increases until eventually even a **single mistake** can cause **instant defeat**.
-
-### Asceticism (`rNH`)
-
-- Attack is substantially **reduced**
-- Reduce length of **next queue** to 1. 
-- Cards are **not deselected** after committing.
-- “RESET” is **disabled** (with the **exception** of **AS/rAS/uAS**, since it replaces **RESET** with **SPIN**)
-- Quests are **less likely** to repeat.
-
-### Loaded Dice (`rMS`)
-
-- Cards are shuffled at the start of **every floor**. This effect gets stronger for every odd-numbered floor reached, with cards straying further from their correct positions.
-- On commit, **shuffle some cards at a cyclic permutation**.
-
-### Freefall (`rGV`)
-
-- The auto-commit timer starts at **2s** and decreases every floor down to a minimum of **1s**.
-- Damage timer is **harsher** under some conditions. 
-
-### Last Stand (`rVL`)
-
-- Cards are **40px (36%)** further apart.
-- Cards must be pressed **four times** to activate *and* to **deactivate**!
-- Any kind of damage is now significantly **stronger**, with only **normal** recovery.
-
-### Damnation (`rDH`)
-
-- Quests are harder.
-- Most combos are now replaced with specifically assigned **5 characters consisting of letters and numbers**.
-- 
-### The Exile (`rIN`)
-
-- **Has ALL the effects of Invisible, plus...**
-- Quest hints are **not shown** at all!
-- The 1st quest **fade away** after a short time, faster as you reach higher floors. (but reappear if you make a wrong commit)
-- The 2nd and 3rd quests also fade away but slightly slower (2x % 3x).
-
-
-### The Warlock (`rAS`)
-
-- **Has ALL the effects of All-Spin, plus...**
-- SPINs are faster than normal.
-- Wounds flip **four cards** instead of two.
-- SPINs and commits (either a pass or wrong commit) will **not remove Burns**, and they aren't removed over time!
-- attack is **stronger** than normal.
-
-### Bleeding Hearts (`rDP`)
-
-- **Has ALL the effects of Duo, plus...**
-- Special fatigue
-- **Half the amount of attack you send** goes to the inactive player.
-- If one player is incapacitated, **you won't be able to climb** and half the amount of attack sent goes to the **active player**!
-
-<details>
-<summary>
-This is not the end!  
-But only for pro players who desire all details.  
-Get X+ rank before reading this section.
-</summary>
-
-### Ultra Mods
-
-You can somehow enable "Ultra Mode" and all reversed mods become Ultra Mods.
-
-Except uEX, ultra mods no longer enable Hard Mode.
-
-But any of them will set the attack-altitude multiplier to 62%.
-
-Ultra mods are considered as reversed mods on score, achievements, etc.
-
-### PSYCHOTIC SOVEREIGN （`uEX`）
-
-- Cards are 30px (27%) closer together!
-- You can fall past floor boundaries!
-
-### ASCENDED VIRTUE （`uNH`）
-
-- Breaking Surge does not send attack! (still gives +1 XP per B2B)
-- Promotion fatigue won't recover on reaching 50% of the XP bar!
-
-### ENTROPY （`uMS`）
-
-- **Completely shuffle all cards** for every single quest passed! 
-
-### COLLAPSING GALAXY （`uGV`）
-
-- The auto-commit timer won't refresh on RESET and starts instantly!
-
-### DIMINISHING VOLITION （`uVL`）
-
-- Every button now takes four presses!
-
-### BLASPHEMY （`uDH`）
-
-- Combo names are heavily jumbled! 
-
-### PARADOXICAL NIHILITY （`uIN`）
-
-- Quests will fade out forever!
-
-### DEPRAVED GRIMOIRE （`uAS`）
-
-- Flipping a burned card now deals health damage! 
-
-### SEVERED EDEN （`uDP`）
-
-- Activating the Duo card no longer swaps players.
-- Deal ~54% more damage to the inactive player from attacks!
-
-</details>
-
-## Behind the Scenes
-
-### Clicker Rating (CR)
-
-Just like TR, the maximum value is 25000,  
-but CR is calculated from:
-
-1. Best Height (5k)
-1. Best Time (5k)
-1. Mod Completion (3k)
-1. Mod Speedrun (2k)
-1. Zenith Point (3k)
-1. Daily Challenge (2k)
-2. Achievement (5k)
-
-For the exact formula, see function `calculateRating()` in this [file](/module/scene/stat.lua)
-
-### Zenith Point (ZP)
-
-You gain ZP after a run, with `ZP = altitude * multiplier`, which `multiplier` is taken from:
-
-|   Mod    |  EX   |    NH     |  MS   |  GV   |    VL     |  DH   |  IN   |  AS   |  DP   |
-| :------: | :---: | :-------: | :---: | :---: | :-------: | :---: | :---: | :---: | :---: |
-| Upright  |  1.4  |    1.1    |  1.2  |  1.1  |    1.1    |  1.2  |  1.2  | 0.85  | 0.95  |
-| Reversed |  2.6  | 1.4+.05*M |  1.7  |  1.2  | 1.2+.02*M |  1.6  |  1.6  |  1.0  |  2.1  |
-
-> **Special Bonuses** (applied when both activated):  
-> rMS+rGV 1.1x  
-> rEX+rVL 1.2x  
-> rDH+rIN 1.4x  
-> rEX+rDP 0.84x
-
-> M = [Total Mod Count] -1  
-> `Hard Mode Decay` = 0.99, applies `number_of_EX_or_Rev - 1` times  
-> `multiplier` forced to `100x` for all revs *(99.99x Originally)*
-
-Total ZP is soft-capped by your skill:
-
-```lua
-local newZP = STAT.zp +
-    zpGain *                           -- base ZP gain
-    icLerp(26, 16, STAT.zp / zpGain) * -- soft cap: slow down after 16x, stop at 26x
-    (Daily.actived and 2.6 or 1)       -- gain 2.6x on daily challenge
+```sh
+git submodule add https://github.com/26F-Studio/Zenitha.git
+git submodule update --init
+# Update in the future:
+git submodule update
 ```
 
-Total ZP decays ~2.6%/d. `ZP*= e^(-0.026)`
+Then load with only one line in main.lua:
 
-Also, DC Highscore decays ~6%/d. `DC*= e^(-0.0626)`
-</details>
+```lua
+require("zenitha")
+```
 
-## Clicker League design draft
+Run the project and you should see the demo scene. Explore other features yourself and have fun!
 
-## a version by a community member
+## Modules
 
-**Main idea**: Sending attacks to knock out your opponent and sending mod effects to disturb them
+### SCN (Scene)
 
-**Sending Attack**: Now your attacks will deal damage directly to the opponent's HP after some time, but the opponent is also able to cancel them.
+allow you custom all callback functions for each scene and easily travel between them.
 
-**Sending Mod**: Breaking surge will apply mod(s) on your opponent for some time.
+```lua
+SCN.add("menu",sceneTable)
+SCN.go("menu")
+SCN.go("setting","fastFade")
+SCN.back()
+```
 
-The game ends when a player's HP reaches zero.
+### BGM / SFX / VOC (Music/Effect/Voice)
 
-## another version by MrZ
+allow you play audio events simpler.
 
-**Main idea**: Sending mod effect to an opponent
+```lua
+BGM.load("bgm1","music/1.ogg")
+BGM.play("bgm1") -- with smooth fade-in/out
+SFX.load("click","sfx/click.ogg")
+SFX.play("click")
+SFX.play("click",0.8,-1,24) -- 80% Vol, left-sided, +2 Oct effect
+-- Module will automatically create/unload idle resources.
+```
 
-Two players start the run, using most of the same gameplay as in single player.
+### BG (Background)
 
-**Sending Buffer**: Your attack power is converted into a corresponding duration of "time" (1 attack = 1 second) and stored in this buffer.  
-When the buffer remains inactive (no increase) for 3 seconds or you take time-based damage, the stored time will be sent to the opponent. The last card you activated is the effect you will send.
+a customizable layer under the scene.
 
-**Cancelling**: Before sending `effect-time` to the opponent, it will try to cancel the same effect currently active on you, with a 2x multiplier.  
-For example, it's not possible to force EX on the opponent if you already have EX.
+```lua
+BG.add("space",{...})
+BG.setDefault("space")
+BG.set("galaxy")
+```
 
-**Sending**: After cancelling, any excess time in the sending buffer is sent to the opponent.
+### WIDGET
 
-The game ends when a player's HP reaches zero.
+interactive widgets layer above the scene, has the highest priority.
+
+### MSG (Message)
+
+an on-screen print, can be used to show notifications or warnings.
+
+```lua
+MSG('info',"Techmino is fun!")
+```
+
+### GC
+
+extended lib of love.graphics.
+
+```lua
+GC.mDraw(obj,x,y,r,kx,ky)
+GC.strokePrint(strokeMode,d,strokeColor,textColor,str,x,y)
+GC.regPolygon(mode,x,y,rad,segments,rot)
+
+local cam=GC.newCamera()
+cam:move(dx,dy)
+cam:scale(k)
+cam:apply()
+
+local bez=GC.newBezier({{x1,y1},{x2,y2},...})
+bez:render(resolution)
+GC.line(bez.curve)
+
+GC.stc_setComp('equal',1)
+GC.stc_rect(0,0,800,600)
+...
+GC.stc_stop()
+
+GC.DO{
+    {'setCL',COLOR.R},
+    {'fRect',0,0,800,600},
+    ...
+}
+```
+
+### FONT
+
+set font style & size easily as `GC.setColor`.
+
+```lua
+FONT.load{
+    consolas="consola.ttf",
+    pixel="codePixel-Regular.ttf"
+    -- My monospaced coding font: github.com/MrZ626/codePixel
+}
+FONT.setFallback('pixel','consolas')
+FONT.setDefaultFont('pixel')
+
+FONT.set(26)
+GC.print(...)
+
+FONT.set(20,'consolas')
+GC.print(...)
+```
+
+### IMG (Image)
+
+allow images to be lazy-loaded after first used.
+
+```lua
+IMG.init{
+    bg={"back/1.png","back/2.png","back/3.png"},
+    ...
+}
+GC.draw(IMG.bg[1])
+```
+
+### FILE
+
+save/load a lua table with one function call like `FILE.save(config,'conf.json')`.
+
+```lua
+FILE.save(config,'conf.json') -- Default to json
+config=FILE.load('conf.json')
+FILE.save(data,'data.lua','-luaon') -- Support "Luaon" format similar to Json
+data=FILE.load('data.lua')
+texts=FILE.load('log.txt','-string')
+```
+
+### LANG (Language)
+
+an i18n module allow you manage all strings which displayed to players/users.
+
+```lua
+LANG.add{en='lang/en.lua',zh='lang/zh.lua'}
+LANG.setDefault('en')
+Text=LANG.set('zh')
+print(Text.hello=="你好")
+```
+
+### MATH / STRING / TABLE
+
+extended libs of standard Lua libs.
+
+```lua
+chebyshevDist=MATH.mDist2(0,x1,y1,x2,y2)
+list=STRING.split("Welcome;to;Zenitha",";") -- {"Welcome","to","Zenitha"}
+t2=TABLE.copyAll(t1)
+```
+
+### ASYNC
+
+Asynchronous luaCode / systemCmd execution module using Love2D threads.
+
+```lua
+ASYNC.runLua('resultKey1',[[
+    return "Hello"
+]])
+
+ASYNC.get('resultKey1') -- "Hello", or nil if not finished yet
+
+ASYNC.runCmd('resultKey2',[[
+    echo "World"
+]])
+
+ASYNC.get('resultKey2') -- "World", or nil if not finished yet
+```
+
+### TASK
+
+a pseudo-async module allow you run a function asynchronously (as coroutine which must yield itself periodically, be continued once per main loop cycle).
+
+```lua
+TASK.lock("signal",2.56)
+TASK.new(function()
+    repeat yield() until not TASK.getLock("signal")
+    print("Echo from Moon")
+end)
+
+function scene.keyDown(k)
+    if k~='escape' then return end
+    if TASK.lock('sureQuit',1) then MSG('info',Text.pressAgainToQuit) return end
+    love.event.quit()
+end
+```
+
+### TCP
+
+allow you exchange data much easier then using LuaSocket. (Yet designed for data exchanging with TCP module itself, and using pure json only)
+
+```lua
+-- Simulate Server
+TASK.new(function()
+    TCP.S_start(10026)
+    TASK.yieldT(0.26) -- Wait a bit, giving client time to send data
+    print(TCP.S_receive()) -- "Hello server!"
+end)
+
+-- Simulate Client
+TASK.new(function()
+    TCP.C_connect("127.0.0.1", 10026)
+    TCP.C_send("Hello server!")
+end)
+```
+
+### WS (WebSocket)
+
+a simple http websocket with LuaSocket.
+
+```lua
+local ws=WS.new({
+    host="localhost",
+    port="80",
+    path="/ws",
+    subPath="/res",
+    subPath="/res",
+})
+ws:connect()
+
+-- Client loop
+TASK.new(function()
+    repeat coroutine.yield() until ws.state~='connecting'
+    ws:send("Hello server!")
+    repeat
+        local mes,op=ws:receive()
+        if mes then
+            print(mes,op) -- "Hello Cliend!", 1 (text type)
+        end
+    until ws.state~='running'
+    print("WS disconnected")
+end)
+```
+
+### HTTP
+
+a simple http client with LuaSocket.
+
+```lua
+HTTP.setThreadCount(1)
+HTTP.setHost("127.0.0.1")
+HTTP.request{
+    pool='login',
+    path='/api/v1/userlogin',
+    body={username='MrZ_26'},
+}
+local res
+repeat res=HTTP.pollMsg('login') until res
+print(res.code,res.body) -- "200", "<html>Welcome, MrZ_26</html>"
+```
+
+### TWEEN
+
+a simple tweening module allow you making smooth animation with several lines of codes
+
+```lua
+TWEEN.new(function(v) Pos=200+100*v end) -- update Pos with v which goes from 0 to 1
+:setEase('InOutSin') -- with a sine curve
+:setDuration(2.6) -- in 2.6 seconds
+:setOnFinish(function() print("FIN") end) -- and print "FIN" when finished
+:run() -- confirm and start
+```
+
+### PROFILE
+
+a simple debug tool allow you start/stop profiling anytime, the result will be placed into the clipboard.
+
+### COLOR
+
+a set of common color tables which can be used with `COLOR.R` (red), `COLOR.dG` (dark green).
+
+### LOG
+
+a simple log tool allow you print fancy text to console and keep permanent log.
+
+```lua
+LOG('info',"26 audio assets loaded")
+LOG('warn',"This app is currently in beta!")
+```
+
+### AE (ANSI Escape)
+
+a simple shortcut tool allow you create ANSI escape code super easily
+
+```lua
+print(AE.b"Bold"..AE.i.."Underline Italic")
+print(AE'r;d;_M'.."reset, delete, magenta "..AE.."and reset format manually")
+```
+
+### Other
+
+And some useful utility functions like `ZENITHA.setMainLoopSpeed` `ZENITHA.setDebugInfo` `ZENITHA.setVersionText`.
+
+Experimental modules:
+`WAIT`, `DEBUG`, `SYSFX`, `TEXT`, `VIB`, `WHEELMOV`, `LOADLIB`, `MIDI`, `COMPILE`
+
+Exterior modules:
+`JSON`, json.lua by rxi;
+`HASH`, sha2.lua by Egor Skriptunoff;
+
+All ZENITHA module VARs are named in all UPPERCASE.
