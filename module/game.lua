@@ -2401,8 +2401,8 @@ function GAME.start()
     GAME.secTime = {}
 
     -- Rank
-    GAME.rank = 1
-    TEXTS.rank:set("R-1")
+    GAME.rank = 6460
+    TEXTS.rank:set("R-6460")
     GAME.xp = 0
     GAME.xpLockLevelMax = URM and M.NH == 2 and 1 or 5
     GAME.xpLockLevel = GAME.xpLockLevelMax
