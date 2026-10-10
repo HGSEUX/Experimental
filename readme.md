@@ -7,7 +7,7 @@
 > Almost all art and sounds are from [TETR.IO](https://tetr.io), a modern yet familiar online stacker game by osk with amazing graphics and music.
 
 
-—-
+-
 
 
 **DISCLAIMER**: **What you are currently viewing is NOT the original version of Zenith Clicker. This is a modified version (a fork) that you may have come across.**
@@ -17,7 +17,7 @@
 https://github.com/MrZ626/ZenithClicker
 
 
-—-
+-
 
 
 **REMINDER**: This game may require the knowledge of the mechanics and mods of TETR.IO's Quick Play 2, or you won't get much fun.  
@@ -137,6 +137,7 @@ Make sure you've discovered most contents before reading this section!
 - Reduce length of **next queue** to 1. 
 - Cards are **not deselected** after committing.
 - “RESET” is **disabled** (with the **exception** of **AS/rAS/uAS**, since it replaces **RESET** with **SPIN**)
+- Quests are **less likely** to repeat.
 
 ### Loaded Dice (`rMS`)
 
@@ -146,18 +147,19 @@ Make sure you've discovered most contents before reading this section!
 ### Freefall (`rGV`)
 
 - The auto-commit timer starts at **2s** and decreases every floor down to a minimum of **1s**.
+- Damage timer is **harsher** under some conditions. 
 
 ### Last Stand (`rVL`)
 
 - Cards are **40px (36%)** further apart.
 - Cards must be pressed **four times** to activate *and* to **deactivate**!
+- Any kind of damage is now significantly **stronger**, with only **normal** recovery.
 
 ### Damnation (`rDH`)
 
 - Quests are harder.
-- Most combos are given a **community name**!
-- TODO: specifics again
-
+- Most combos are now replaced with specifically assigned **5 characters consisting of letters and numbers**.
+- 
 ### The Exile (`rIN`)
 
 - **Has ALL the effects of Invisible, plus...**
@@ -165,26 +167,14 @@ Make sure you've discovered most contents before reading this section!
 - The 1st quest **fade away** after a short time, faster as you reach higher floors. (but reappear if you make a wrong commit)
 - The 2nd and 3rd quests also fade away but slightly slower (2x % 3x).
 
-| Floor |          Fade Time (1st quest)          |
-| :---: | :-------------------------------------: |
-|   1   | ( ( 1 + .62) * .26) ^ -1 + .26 = 2.63 s |
-|   2   | ( ( 2 + .62) * .26) ^ -1 + .26 = 1.73 s |
-|   3   | ( ( 3 + .62) * .26) ^ -1 + .26 = 1.32 s |
-|   4   | ( ( 4 + .62) * .26) ^ -1 + .26 = 1.09 s |
-|   5   | ( ( 5 + .62) * .26) ^ -1 + .26 = 0.94 s |
-|   6   | ( ( 6 + .62) * .26) ^ -1 + .26 = 0.84 s |
-|   7   | ( ( 7 + .62) * .26) ^ -1 + .26 = 0.76 s |
-|   8   | ( ( 8 + .62) * .26) ^ -1 + .26 = 0.71 s |
-|   9   | ( ( 9 + .62) * .26) ^ -1 + .26 = 0.66 s |
-|  10   | ( (10 + .62) * .26) ^ -1 + .26 = 0.62 s |
 
 ### The Warlock (`rAS`)
 
 - **Has ALL the effects of All-Spin, plus...**
 - SPINs are faster than normal.
 - Wounds flip **four cards** instead of two.
-- SPINs and wrong commits will **not remove Burns**, and they aren't removed over time!
-- B2B >= 4 sends **+1 attack**, but passing imperfectly **sends nothing**!
+- SPINs and commits (either a pass or wrong commit) will **not remove Burns**, and they aren't removed over time!
+- attack is **stronger** than normal.
 
 ### Bleeding Hearts (`rDP`)
 
@@ -222,7 +212,7 @@ Ultra mods are considered as reversed mods on score, achievements, etc.
 
 ### ENTROPY （`uMS`）
 
-- Shuffle all cards at each side of the last flipped card instead of only two cards!
+- **Completely shuffle all cards** for every single quest passed! 
 
 ### COLLAPSING GALAXY （`uGV`）
 
@@ -234,7 +224,7 @@ Ultra mods are considered as reversed mods on score, achievements, etc.
 
 ### BLASPHEMY （`uDH`）
 
-- Combo names are heavily jumbled! (only first and last letter are safe)
+- Combo names are heavily jumbled! 
 
 ### PARADOXICAL NIHILITY （`uIN`）
 
@@ -242,7 +232,7 @@ Ultra mods are considered as reversed mods on score, achievements, etc.
 
 ### DEPRAVED GRIMOIRE （`uAS`）
 
-- Flipping a burned card now causes an instant defeat!
+- Flipping a burned card now deals health damage! 
 
 ### SEVERED EDEN （`uDP`）
 
